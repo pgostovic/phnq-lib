@@ -2,7 +2,7 @@
 
 import React, { Component, PureComponent, createContext } from 'react';
 import PropTypes from 'prop-types';
-import { newLogger } from '../log';
+import { newLogger } from './log';
 
 const log = newLogger('phnq.react-util.state');
 
