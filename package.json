@@ -2,8 +2,10 @@
   "name": "phnq-lib",
   "version": "1.0.0",
   "description": "Common libs, some isomorphic.",
+  "main": "./dist/phnq-lib.js",
   "scripts": {
-    "clean": "rimraf coverage",
+    "dist": "webpack",
+    "clean": "rimraf dist coverage",
     "test": "jest"
   },
   "author": "Patrick Gostovic",
@@ -33,6 +35,7 @@
     "babel-core": "^7.0.0-bridge.0",
     "babel-eslint": "^10.0.1",
     "babel-jest": "^23.6.0",
+    "babel-loader": "^8.0.4",
     "eslint": "^5.8.0",
     "eslint-config-airbnb": "^17.1.0",
     "eslint-config-prettier": "^3.1.0",
@@ -42,7 +45,11 @@
     "eslint-plugin-react": "^7.11.1",
     "jest": "^23.6.0",
     "prettier": "^1.14.3",
-    "rimraf": "^2.6.2"
+    "raw-loader": "^0.5.1",
+    "rimraf": "^2.6.2",
+    "webpack": "^4.24.0",
+    "webpack-bundle-analyzer": "^3.0.3",
+    "webpack-cli": "^3.1.2"
   },
   "jest": {
     "verbose": true,
