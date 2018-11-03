@@ -8,6 +8,7 @@
   },
   "author": "Patrick Gostovic",
   "license": "ISC",
+  "main": "./lib",
   "dependencies": {
     "chalk": "^2.4.1",
     "continuation-local-storage": "^3.2.1",
@@ -49,7 +50,7 @@
     "notify": true,
     "collectCoverage": true,
     "notifyMode": "change",
-    "rootDir": "./src",
+    "rootDir": "./lib",
     "coverageDirectory": "../coverage",
     "testURL": "https://phnq.org:1234/"
   }
