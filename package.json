@@ -8,6 +8,9 @@
     "clean": "rimraf dist coverage",
     "test": "jest"
   },
+  "files": [
+    "./dist/**"
+  ],
   "author": "Patrick Gostovic",
   "license": "ISC",
   "dependencies": {
