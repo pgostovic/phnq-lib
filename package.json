@@ -2,15 +2,12 @@
   "name": "phnq-lib",
   "version": "1.0.0",
   "description": "Common libs, some isomorphic.",
-  "main": "./dist/phnq-lib.js",
+  "main": "dist",
   "scripts": {
     "dist": "webpack",
     "clean": "rimraf dist coverage",
     "test": "jest"
   },
-  "files": [
-    "dist/url.js"
-  ],
   "author": "Patrick Gostovic",
   "license": "ISC",
   "dependencies": {
