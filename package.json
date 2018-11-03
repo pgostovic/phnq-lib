@@ -49,7 +49,7 @@
     "notify": true,
     "collectCoverage": true,
     "notifyMode": "change",
-    "rootDir": "./lib",
+    "rootDir": "./",
     "coverageDirectory": "../coverage",
     "testURL": "https://phnq.org:1234/"
   }
