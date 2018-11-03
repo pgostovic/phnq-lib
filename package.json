@@ -9,7 +9,7 @@
     "test": "jest"
   },
   "files": [
-    "./dist/**"
+    "dist/url.js"
   ],
   "author": "Patrick Gostovic",
   "license": "ISC",
