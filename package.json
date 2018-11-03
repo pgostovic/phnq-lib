@@ -1,0 +1,56 @@
+{
+  "name": "phnq-lib",
+  "version": "1.0.0",
+  "description": "Common libs, some isomorphic.",
+  "scripts": {
+    "clean": "rimraf coverage",
+    "test": "jest"
+  },
+  "author": "Patrick Gostovic",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^2.4.1",
+    "continuation-local-storage": "^3.2.1",
+    "cross-fetch": "^2.2.3",
+    "md5": "^2.2.1",
+    "mongodb": "^3.1.8",
+    "pretty-hrtime": "^1.0.3",
+    "process": "^0.11.10",
+    "prop-types": "^15.6.2",
+    "react": "^16.6.0",
+    "react-router-dom": "^4.3.1",
+    "sendgrid": "^5.2.3",
+    "uuid": "^3.3.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.1.2",
+    "@babel/plugin-proposal-class-properties": "^7.1.0",
+    "@babel/plugin-proposal-decorators": "^7.1.2",
+    "@babel/plugin-transform-regenerator": "^7.0.0",
+    "@babel/polyfill": "^7.0.0",
+    "@babel/preset-env": "^7.1.0",
+    "@babel/preset-react": "^7.0.0",
+    "babel-core": "^7.0.0-bridge.0",
+    "babel-eslint": "^10.0.1",
+    "babel-jest": "^23.6.0",
+    "eslint": "^5.8.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-config-prettier": "^3.1.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jsx-a11y": "^6.1.2",
+    "eslint-plugin-prettier": "^3.0.0",
+    "eslint-plugin-react": "^7.11.1",
+    "jest": "^23.6.0",
+    "prettier": "^1.14.3",
+    "rimraf": "^2.6.2"
+  },
+  "jest": {
+    "verbose": true,
+    "notify": true,
+    "collectCoverage": true,
+    "notifyMode": "change",
+    "rootDir": "./src",
+    "coverageDirectory": "../coverage",
+    "testURL": "https://phnq.org:1234/"
+  }
+}
