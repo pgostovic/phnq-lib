@@ -1,11 +1,12 @@
 const fs = require('fs');
 const path = require('path');
-const { name, version, description, author, license, dependencies } = require('./package.json');
+const { name, version, description, repository, author, license, dependencies } = require('./package.json');
 
 const distPkgJSON = {
   name,
   version,
   description,
+  repository,
   author,
   license,
   dependencies,

@@ -2,6 +2,10 @@
   "name": "phnq-lib",
   "version": "1.4.2",
   "description": "Common libs, some isomorphic.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pgostovic/phnq-lib.git"
+  },
   "main": "dist",
   "scripts": {
     "dist": "webpack",
