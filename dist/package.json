@@ -1,8 +1,7 @@
 {
   "name": "phnq-lib",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Common libs, some isomorphic.",
-  "main": "dist",
   "author": "Patrick Gostovic",
   "license": "ISC",
   "dependencies": {

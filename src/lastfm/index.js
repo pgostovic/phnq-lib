@@ -1,7 +1,6 @@
-import Client, { cache } from './client';
+import Client from './client';
 
 export default class LastFMClient extends Client {
-  // @cache({ disabled: true })
   getArtistInfo({ mbid, artist }) {
     return this.req('artist.getinfo', { mbid, artist }, 'artist');
   }
