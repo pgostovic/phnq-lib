@@ -7,7 +7,9 @@
     "dist": "webpack",
     "postdist": "node postdist",
     "clean": "rimraf dist",
-    "test": "jest"
+    "test": "jest",
+    "release:patch": "npm dist; cd dist; npm version patch; npm publish",
+    "release:minor": "npm dist; cd dist; npm version minor; npm publish"
   },
   "author": "Patrick Gostovic",
   "license": "ISC",
