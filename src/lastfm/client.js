@@ -1,5 +1,6 @@
 import md5 from 'md5';
 import fetch from 'cross-fetch';
+import process from 'process';
 import prettyHrtime from 'pretty-hrtime';
 import { createNamespace } from 'continuation-local-storage';
 import { newLogger } from '../log';

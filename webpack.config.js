@@ -6,17 +6,6 @@ const analyzeBundle = process.env.ANALYZE_BUNDLE === 'true';
 const config = {
   mode: 'production',
 
-  // entry: {
-  //   api: ['babel-polyfill', path.resolve(__dirname, '../src/main.js')],
-  //   landing: ['babel-polyfill', path.resolve(__dirname, '../src/landing.js')],
-  // },
-  // output: {
-  //   filename: 'api/[name].js',
-  //   path: path.resolve(__dirname, '../dist'),
-  //   publicPath: apiRoot,
-  //   library: 'edgt',
-  // },
-
   externals: {
     react: 'react',
     'prop-types': 'prop-types',

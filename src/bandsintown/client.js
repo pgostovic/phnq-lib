@@ -1,4 +1,5 @@
 import fetch from 'cross-fetch';
+import process from 'process';
 import md5 from 'md5';
 import prettyHrtime from 'pretty-hrtime';
 import { newLogger } from '../log';
