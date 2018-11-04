@@ -1,8 +1,8 @@
 import md5 from 'md5';
 import fetch from 'cross-fetch';
-import process from 'process';
 import prettyHrtime from 'pretty-hrtime';
 import { createNamespace } from 'continuation-local-storage';
+import hrtime from '../hrtime';
 import { newLogger } from '../log';
 
 const log = newLogger('phnq.lastfm');
@@ -60,12 +60,12 @@ export default class Client {
 
     const url = `${baseUrl}?${q}`;
 
-    const start = process.hrtime();
+    const start = hrtime();
 
     const resp = await fetch(url);
     const json = await resp.json();
 
-    log('%s %d %s %o', prettyHrtime(process.hrtime(start)), resp.status, method, reqParams);
+    log('%s %d %s %o', prettyHrtime(hrtime(start)), resp.status, method, reqParams);
 
     if (json.error) {
       throw new Error(`LastFM: ${json.message}`);

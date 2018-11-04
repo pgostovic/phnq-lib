@@ -1,11 +1,11 @@
 import md5 from 'md5';
 import fetch from 'cross-fetch';
-import process from 'process';
 import prettyHrtime from 'pretty-hrtime';
 import uuid from 'uuid/v4';
 import { createNamespace } from 'continuation-local-storage';
 import SpotifyError from './error';
 import { newLogger } from '../log';
+import hrtime from '../hrtime';
 
 const log = newLogger('phnq.spotify');
 
@@ -155,11 +155,11 @@ export class Client {
 
     const url = urlComps.join('');
 
-    const start = process.hrtime();
+    const start = hrtime();
 
     const resp = await fetch(url, fetchOptions);
 
-    log('%s %d %s %s %o', prettyHrtime(process.hrtime(start)), resp.status, method, path, params);
+    log('%s %d %s %s %o', prettyHrtime(hrtime(start)), resp.status, method, path, params);
 
     const json = resp.status === 204 ? null : await resp.json();
 

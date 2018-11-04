@@ -1,8 +1,8 @@
 import md5 from 'md5';
 import fetch from 'cross-fetch';
-import process from 'process';
 import prettyHrtime from 'pretty-hrtime';
 import { newLogger } from '../log';
+import hrtime from '../hrtime';
 
 const log = newLogger('phnq.wikipedia');
 
@@ -55,13 +55,13 @@ const req = async (reqParams, ...attrs) => {
 
   const url = `${baseUrl}?${q}`;
 
-  const start = process.hrtime();
+  const start = hrtime();
 
   const resp = await fetch(url);
   const json = await resp.json();
 
   log('URL', url);
-  log('%s %d %o', prettyHrtime(process.hrtime(start)), resp.status, reqParams);
+  log('%s %d %o', prettyHrtime(hrtime(start)), resp.status, reqParams);
 
   if (json.error) {
     throw new Error(`LastFM: ${json.message}`);

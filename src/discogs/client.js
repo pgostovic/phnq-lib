@@ -1,8 +1,8 @@
 import fetch from 'cross-fetch';
 import md5 from 'md5';
-import process from 'process';
 import prettyHrtime from 'pretty-hrtime';
 import { newLogger } from '../log';
+import hrtime from '../hrtime';
 
 const log = newLogger('phnq.discogs');
 
@@ -40,12 +40,12 @@ export const req = async (path, reqParams, ...attrs) => {
 
   const url = `${baseUrl}${path}?${q}`;
 
-  const start = process.hrtime();
+  const start = hrtime();
 
   const resp = await fetch(url);
   const json = await resp.json();
 
-  log('%s %d %s %o', prettyHrtime(process.hrtime(start)), resp.status, path, reqParams);
+  log('%s %d %s %o', prettyHrtime(hrtime(start)), resp.status, path, reqParams);
 
   const result = attrs.reduce((obj, attr) => obj[attr], json);
   if (cache) {
