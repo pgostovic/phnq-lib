@@ -25,11 +25,14 @@ const config = {
     'cross-fetch': 'cross-fetch',
     mongodb: 'mongodb',
     'continuation-local-storage': 'continuation-local-storage',
+    md5: 'md5',
+    'pretty-hrtime': 'pretty-hrtime',
   },
 
   entry: {
     lastfm: path.resolve(__dirname, 'src/lastfm/index.js'),
     spotify: path.resolve(__dirname, 'src/spotify/index.js'),
+    wikipedia: path.resolve(__dirname, 'src/wikipedia/index.js'),
     cache: path.resolve(__dirname, 'src/cache.js'),
     collections: path.resolve(__dirname, 'src/collections.js'),
     color: path.resolve(__dirname, 'src/color.js'),
