@@ -1,0 +1,22 @@
+{
+  "name": "phnq-lib",
+  "version": "1.0.0",
+  "description": "Common libs, some isomorphic.",
+  "main": "dist",
+  "author": "Patrick Gostovic",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^2.4.1",
+    "continuation-local-storage": "^3.2.1",
+    "cross-fetch": "^2.2.3",
+    "md5": "^2.2.1",
+    "mongodb": "^3.1.8",
+    "pretty-hrtime": "^1.0.3",
+    "process": "^0.11.10",
+    "prop-types": "^15.6.2",
+    "react": "^16.6.0",
+    "react-router-dom": "^4.3.1",
+    "sendgrid": "^5.2.3",
+    "uuid": "^3.3.2"
+  }
+}
