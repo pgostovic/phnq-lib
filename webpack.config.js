@@ -5,6 +5,7 @@ const analyzeBundle = process.env.ANALYZE_BUNDLE === 'true';
 
 const config = {
   mode: 'production',
+  devtool: 'source-map',
 
   externals: {
     react: 'react',
@@ -19,7 +20,11 @@ const config = {
     sendgrid: 'sendgrid',
   },
 
-  //  ['@babel/polyfill', path.resolve(__dirname, 'index.js')],
+  output: {
+    path: path.resolve(__dirname, 'dist'),
+    libraryTarget: 'umd',
+  },
+
   module: {
     rules: [
       {
@@ -43,31 +48,22 @@ if (analyzeBundle) {
 
 const clientConfig = {
   ...config,
-
   target: 'web',
-
   entry: path.resolve(__dirname, 'index.client.js'),
-
   output: {
+    ...config.output,
     filename: 'index.client.js',
-    path: path.resolve(__dirname, 'dist'),
-    libraryTarget: 'umd',
   },
 };
 
 const serverConfig = {
   ...config,
-
   target: 'node',
-
   entry: path.resolve(__dirname, 'index.server.js'),
-
   output: {
+    ...config.output,
     filename: 'index.server.js',
-    path: path.resolve(__dirname, 'dist'),
-    libraryTarget: 'umd',
   },
 };
 
 module.exports = [clientConfig, serverConfig];
-// module.exports = [clientConfig];
