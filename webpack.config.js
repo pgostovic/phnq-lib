@@ -17,7 +17,7 @@ const config = {
     'continuation-local-storage': 'continuation-local-storage',
     md5: 'md5',
     'pretty-hrtime': 'pretty-hrtime',
-    sendgrid: 'sendgrid',
+    '@sendgrid/mail': '@sendgrid/mail',
   },
 
   output: {
