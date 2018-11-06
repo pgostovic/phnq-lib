@@ -1,6 +1,6 @@
 {
   "name": "phnq-lib",
-  "version": "1.5.2",
+  "version": "1.5.3",
   "description": "Common libs, some isomorphic.",
   "repository": {
     "type": "git",
