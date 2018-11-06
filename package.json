@@ -6,7 +6,8 @@
     "type": "git",
     "url": "git+https://github.com/pgostovic/phnq-lib.git"
   },
-  "main": "dist",
+  "main": "index.server.js",
+  "browser": "index.client.js",
   "scripts": {
     "dist": "webpack",
     "postdist": "node postdist",
