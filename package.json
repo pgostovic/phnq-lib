@@ -64,8 +64,9 @@
     "verbose": true,
     "notify": true,
     "collectCoverage": true,
+    "coverageDirectory": "../.coverage",
     "notifyMode": "change",
-    "rootDir": "./src",
+    "rootDir": "./lib",
     "testURL": "https://phnq.org:1234/"
   }
 }
