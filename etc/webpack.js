@@ -11,7 +11,7 @@ const config = {
   externals: [nodeExternals()],
 
   output: {
-    path: path.resolve(__dirname, 'dist'),
+    path: path.resolve(__dirname, '../dist'),
     libraryTarget: 'umd',
   },
 
@@ -39,7 +39,7 @@ if (analyzeBundle) {
 const clientConfig = {
   ...config,
   target: 'web',
-  entry: path.resolve(__dirname, 'index.client.js'),
+  entry: path.resolve(__dirname, '../index.client.js'),
   output: {
     ...config.output,
     filename: 'index.client.js',
@@ -49,7 +49,7 @@ const clientConfig = {
 const serverConfig = {
   ...config,
   target: 'node',
-  entry: path.resolve(__dirname, 'index.server.js'),
+  entry: path.resolve(__dirname, '../index.server.js'),
   output: {
     ...config.output,
     filename: 'index.server.js',

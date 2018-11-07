@@ -10,7 +10,7 @@ const {
   author,
   license,
   dependencies,
-} = require('./package.json');
+} = require('../package.json');
 
 const distPkgJSON = {
   name,
@@ -24,4 +24,4 @@ const distPkgJSON = {
   dependencies,
 };
 
-fs.writeFileSync(path.resolve(__dirname, 'dist/package.json'), JSON.stringify(distPkgJSON, 0, 2));
+fs.writeFileSync(path.resolve(__dirname, '../dist/package.json'), JSON.stringify(distPkgJSON, 0, 2));

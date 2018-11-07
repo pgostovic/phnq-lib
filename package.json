@@ -9,8 +9,8 @@
   "main": "index.server.js",
   "browser": "index.client.js",
   "scripts": {
-    "dist": "webpack",
-    "postdist": "node postdist",
+    "dist": "webpack --config etc/webpack.js",
+    "postdist": "node scripts/postdist",
     "clean": "rimraf dist",
     "test": "jest",
     "release:patch": "npm version patch; npm run dist; cd dist; npm publish",
