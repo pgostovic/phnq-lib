@@ -1,4 +1,5 @@
 const path = require('path');
+const nodeExternals = require('webpack-node-externals');
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 
 const analyzeBundle = process.env.ANALYZE_BUNDLE === 'true';
@@ -7,18 +8,7 @@ const config = {
   mode: 'production',
   devtool: 'source-map',
 
-  externals: {
-    react: 'react',
-    'prop-types': 'prop-types',
-    chalk: 'chalk',
-    process: 'process',
-    'cross-fetch': 'cross-fetch',
-    mongodb: 'mongodb',
-    'continuation-local-storage': 'continuation-local-storage',
-    md5: 'md5',
-    'pretty-hrtime': 'pretty-hrtime',
-    '@sendgrid/mail': '@sendgrid/mail',
-  },
+  externals: [nodeExternals()],
 
   output: {
     path: path.resolve(__dirname, 'dist'),
