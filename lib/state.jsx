@@ -4,7 +4,8 @@ import React, { Component, PureComponent, createContext } from 'react';
 import PropTypes from 'prop-types';
 import { newLogger } from './log';
 
-const log = newLogger('phnq.react-util.state');
+const log = newLogger('phnq-lib.state');
+log('STATE');
 
 const names = new Set();
 const providers = {};
@@ -14,6 +15,7 @@ export const createState = (name, defaultState = {}, getActions = () => ({})) =>
     throw new Error(`State names must be unique - '${name}' already exists`);
   }
 
+  log('created state %s', name);
   names.add(name);
 
   const { Provider, Consumer } = createContext();
