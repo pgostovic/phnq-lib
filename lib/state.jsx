@@ -10,6 +10,11 @@ log('STATE');
 const names = new Set();
 const providers = {};
 
+if (!window.getCombinedState) {
+  window.getCombinedState = () =>
+    Object.keys(providers).reduce((states, k) => ({ ...states, [k]: providers[k].state }), {});
+}
+
 export const createState = (name, defaultState = {}, getActions = () => ({})) => {
   if (names.has(name)) {
     throw new Error(`State names must be unique - '${name}' already exists`);
@@ -106,6 +111,3 @@ export const createState = (name, defaultState = {}, getActions = () => ({})) =>
 
   return { provider, map };
 };
-
-window.getCombinedState = () =>
-  Object.keys(providers).reduce((states, k) => ({ ...states, [k]: providers[k].state }), {});
