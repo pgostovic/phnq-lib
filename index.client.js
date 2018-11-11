@@ -1,5 +1,3 @@
-console.log('PHNQ-LIB CLIENT');
-
 export * from './lib/cache';
 export * from './lib/collections';
 export * from './lib/color';
