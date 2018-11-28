@@ -5,8 +5,6 @@ import PropTypes from 'prop-types';
 import { newLogger } from './log';
 
 const log = newLogger('phnq-lib.state');
-log('STATE');
-
 const names = new Set();
 const providers = {};
 
