@@ -1,3 +1,6 @@
+import { Model } from './lib/model';
+
+export const MongoModel = Model;
 export * from './lib/cache';
 export * from './lib/collections';
 export * from './lib/color';
