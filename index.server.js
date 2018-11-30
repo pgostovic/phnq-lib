@@ -13,6 +13,7 @@ export * from './lib/hrtime';
 export * from './lib/location';
 export * from './lib/log';
 export * from './lib/model';
+export * from './lib/serialize';
 export * from './lib/mongo';
 export * from './lib/url';
 export * from './lib/wait';
